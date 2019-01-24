@@ -17,7 +17,10 @@ public class GoldCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        IEnumerator GoldUP()
+        
+    }
+
+    IEnumerator GoldUP()
         {
             while(true)
             {
@@ -26,5 +29,4 @@ public class GoldCounter : MonoBehaviour
                 textGold.text=Gold.ToString();
             }
         }
-    }
 }

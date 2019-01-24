@@ -188,7 +188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 80.00006, y: -30.000183}
+  m_AnchoredPosition: {x: 80, y: -30.000244}
   m_SizeDelta: {x: -160, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &353818940
@@ -820,7 +820,7 @@ Animator:
   m_GameObject: {fileID: 1023248634}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ca19f2761b6a441b0ad3354bd1b1a4ef, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2fe2ec4ff00bd4f3b8f5566e52d6091e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -887,6 +887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613373004}
   - component: {fileID: 1613373003}
+  - component: {fileID: 1613373005}
   m_Layer: 0
   m_Name: GoldCounter
   m_TagString: Untagged
@@ -906,8 +907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4b7f80e939145d49aad4463b2e9e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gold: 0
-  TextGold: {fileID: 71129308}
+  Gold: 10
+  textGold: {fileID: 0}
 --- !u!4 &1613373004
 Transform:
   m_ObjectHideFlags: 0
@@ -922,6 +923,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613373005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613373002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4b7f80e939145d49aad4463b2e9e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gold: 10
+  textGold: {fileID: 71129308}
 --- !u!1 &1637227268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1093,7 @@ GameObject:
   - component: {fileID: 2019793057}
   - component: {fileID: 2019793059}
   - component: {fileID: 2019793058}
+  - component: {fileID: 2019793060}
   m_Layer: 0
   m_Name: Orc
   m_TagString: Untagged
@@ -1166,3 +1182,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2019793060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019793056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f2bc816f0524f49802175114e23dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
