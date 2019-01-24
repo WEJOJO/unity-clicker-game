@@ -14,8 +14,9 @@ public class DataController : MonoBehaviour {
 		}
 	}
 
-	static DataController _instance;
-	public static DataController Instance {
+	static DataController _instance; //이게 아마 생성자의 개념같은데?.. Private같은건가?//원래는 Monobehaviour의 경우 Object가 있어야 하
+//는데, 이것을 대신해서 얘가 만들고 있기 때문에 직접 유니티에서 객체를 만들어서 스크립트 추가하지 않아도 정상동작하는 것임.
+	public static DataController Instance { //이부분은 DataController 형태를 반환하는 함수 Instance임. 즉 사용법을 제시한 것. _instance는 private로 될 것.
 		get {
 			if( ! _instance ) {
 				_container = new GameObject();
@@ -80,7 +81,7 @@ public class DataController : MonoBehaviour {
 			_gameData.GoldPerSec = 1;
 			_gameData.Gold = 0;
 			_gameData.Health = 100;
-			_gameData.Damage = 1;
+			_gameData.Damage = 10;
 			_gameData.Level = 1;
 			_gameData.Exp = 0;
 
@@ -93,7 +94,8 @@ public class DataController : MonoBehaviour {
 		string dataAsJson = JsonUtility.ToJson (gameData);
 
 		string filePath = Application.persistentDataPath + gameDataProjectFilePath;
-		File.WriteAllText (filePath, dataAsJson);
+		File.WriteAllText (filePath, dataAsJson); //이분의 Path를 서버와 통신하는 것으로 바꾸어 줘야함...
+	
 
 	}
 

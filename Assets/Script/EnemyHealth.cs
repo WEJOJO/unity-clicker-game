@@ -12,7 +12,7 @@ public class EnemyHealth : MonoBehaviour {
 	}
 
 	public void OnDamage() {
-		Health = Health - 20;
+		Health = Health - DataController.Instance.gameData.Damage;
 		if (Health <= 0) {
 			OnDie ();
 		}

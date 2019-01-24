@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-[Serializable]
+[Serializable] //Json으로 바꿀 때 사용한다.
 public class GameData {
 
 	public int Gold;

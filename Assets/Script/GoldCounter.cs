@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class GoldCounter : MonoBehaviour
 {
-    public int Gold=10;
     public Text textGold;
 
     // Start is called before the first frame update
@@ -25,8 +24,9 @@ public class GoldCounter : MonoBehaviour
             while(true)
             {
                 yield return new WaitForSecondsRealtime(1f);
-                Gold++;
-                textGold.text=Gold.ToString();
+                DataController.Instance.gameData.Gold += DataController.Instance.gameData.GoldPerSec;
+                textGold.text=DataController.Instance.gameData.Gold.ToString();
+                DataController.Instance.SaveGameData();
             }
         }
 }
